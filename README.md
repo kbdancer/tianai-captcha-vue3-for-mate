@@ -1,5 +1,27 @@
-# tianai-captcha-vue3-for-mate
+# 注意：只保留了滑动验证码做示例，方便萌新入门，其他类型请自行解决
 
+## 主要内容
+```
+/src/assets/captcha 文件夹是我简单修改过的sdk，修改内容包括css样式文件和tianai-captcha.js
+如果你之需要用到滑动验证码，则直接引入此文件夹，不需要修改任何东西
+如果你需要增加其他内容需要对js文件修改，请注意对比天爱官方demo自行解决，这里不做说明
+```
+## 运行说明
+```
+修改 vue.config.js 文件，具体内容请参考本仓库中的设置，用途不做说明
+特别注意：这里的/check代理使用的post请求，跨域了，所以不会成功，自己测试的时候请在本地运行服务端，改成自己的地址即可成功测试
+验证过程中会使用localStorage将验证码的id临时存储起来，验证结束后这个ID可以跟登录的参数一起发到服务端，服务端根据ID去查是否验证通过
+这里的业务逻辑请根据自己的项目自行决定
+```
+## 其他说明
+```
+App.vue 中已经给出了基本流程，一看就懂，所以，如果有什么问题，请在天爱讨论群里面讨论
+此demo的方法已经运行在我多个生产环境的项目中，再次感谢天爱验证码，极大的缩短了我的项目开发时间
+```
+## 特别说明
+```
+服务端请找天爱官方获取，本人不提供服务端的任何代码
+```
 ## Project setup
 ```
 yarn install
@@ -9,17 +31,3 @@ yarn install
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# tianai-captcha-vue3-for-mate
